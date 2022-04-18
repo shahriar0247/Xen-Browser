@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xen_Browser.MainPage"
+             >
+
+    <Grid RowDefinitions="90*, 10*">
+        <WebView Grid.Row="0" Source="{Binding url_bind}" x:Name="web_view">
+
+        </WebView>
+        <Grid Grid.Row="1" Padding="15">
+            <Grid ColumnDefinitions="80*,20*">
+                <Editor Text="{Binding url_bind}"></Editor>
+                <Button Grid.Column="1" Text="Load" Command="{Binding loadurl_command}"></Button>
+            </Grid>
+         
+        </Grid>
+    </Grid>
+        
+
+</ContentPage>
