@@ -5,13 +5,13 @@
              >
 
     <Grid RowDefinitions="90*, 10*">
-        <WebView Grid.Row="0" Source="{Binding url_bind}" x:Name="web_view">
+        <WebView Navigating="webview_Navigating" Source="{Binding  webview_bind}" Navigated="webview_Navigated" Grid.Row="0" x:Name="webview">
 
         </WebView>
         <Grid Grid.Row="1" Padding="15">
             <Grid ColumnDefinitions="80*,20*">
-                <Editor Text="{Binding url_bind}"></Editor>
-                <Button Grid.Column="1" Text="Load" Command="{Binding loadurl_command}"></Button>
+                <Entry x:Name="input_url" Focused="input_url_Focused"></Entry>
+                <Button Grid.Column="1" Text="Load" x:Name="load_btn" Clicked="load_btn_Clicked"></Button>
             </Grid>
          
         </Grid>
